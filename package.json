@@ -1,14 +1,27 @@
 {
-  "name": "static-site",
+  "name": "generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Landon Murray",
   "license": "ISC",
   "dependencies": {
     "inquirer": "8.2.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LandoBM/professional-ReadMe.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "inquirer"
+  ],
+  "bugs": {
+    "url": "https://github.com/LandoBM/professional-ReadMe/issues"
+  },
+  "homepage": "https://github.com/LandoBM/professional-ReadMe#readme"
 }

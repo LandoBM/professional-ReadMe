@@ -34,7 +34,7 @@ const questions = [
     {
         type: 'input',
         message: 'How do I install the project?',
-        name: 'install',
+        name: 'installation',
         validate: install => {
             if(install) {
             return true
@@ -45,20 +45,20 @@ const questions = [
     }, 
     {
         type: 'input',
-        message: 'How to use this project?',
-        name: 'usageinfo',
+        message: 'What was used to create this project?',
+        name: 'usage',
         validate: usageInfo => {
             if(usageInfo) {
             return true
             }else {
-            console.log('Enter how to use the project'); 
+            console.log('Enter items that helped create this project'); 
             return false}
         }
     }, 
     {
         type: 'input',
         message: 'Who have contributed to this project?',
-        name: 'contribution',
+        name: 'contributors',
         validate: contribution => {
             if(contribution) {
             return true
@@ -108,7 +108,7 @@ const questions = [
 // TODO: Create a function to write README file
 
 function writeToFile(fileName, data){
-    return fs.writeFile(`./${fileName.toLowerCase().split(' ').md}`,data,(err)=>{
+    return fs.writeFile(`./${fileName.toLowerCase().split(' ')}`,data,(err)=>{
         if(err){
             console.log("You've encountered an Error")
         } else {
@@ -122,7 +122,7 @@ function init() {
     inquirer.prompt(questions)
         .then((response) => {
             console.log(response)
-        writeToFile(`./utils/READMe.md`, generateMarkdown({... response}))
+        writeToFile("NewREAD.md", generateMarkdown({ ...response}))
         })
 }
 
