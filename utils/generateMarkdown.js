@@ -33,6 +33,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
+  
   ## Table of Contents
   * [Description](#description)
   * [Installation](#install)
@@ -41,6 +42,8 @@ function generateMarkdown(data) {
   * [License](#license)
   * [Test](#test)
   * [Questions](#questions)
+
+
   ${renderLicenseLink(data.license)}
     
   # Description
@@ -62,7 +65,6 @@ function generateMarkdown(data) {
 
   ${renderLicenseSection(data.license)}
 
-  // writeToFile(title, model)
   `;
 }
 

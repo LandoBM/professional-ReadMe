@@ -22,7 +22,7 @@ const questions = [
     {
         type: 'input',
         message: 'How would you describe the project?',
-        name: 'Description',
+        name: 'description',
         validate: description => {
             if(description) {
             return true
@@ -47,8 +47,8 @@ const questions = [
         type: 'input',
         message: 'How to use this project?',
         name: 'usageinfo',
-        validate: userInfo => {
-            if(userInfo) {
+        validate: usageInfo => {
+            if(usageInfo) {
             return true
             }else {
             console.log('Enter how to use the project'); 
@@ -70,7 +70,7 @@ const questions = [
     {
         type: 'list',
         list: 'Which license was used?',
-        name: 'License',
+        name: 'license',
         choices:['N/A','MIT License', 'GPL License', 'Apache License', 'GNU License'],
         validate: license => {
             if(license) {
