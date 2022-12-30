@@ -2,7 +2,7 @@
 const inquirer = require('inquirer')
 const fs = require('fs');
 const { default: test } = require('node:test');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 const { userInfo } = require('os');
 
 // TODO: Create an array of questions for user input
@@ -107,36 +107,22 @@ const questions = [
 ]
 // TODO: Create a function to write README file
 
-function writeToFile(fileName, data) {
-fs.writeFile(`./${fileName.toLowerCase().split(' ').join('').md}`,data, (error)=>{
-   if(error){
-    console.log(error)
-   } else {
-    console.log(`Your ReadME is complete!`)
-   }
-})
+function writeToFile(fileName, data){
+    return fs.writeFile(`./${fileName.toLowerCase().split(' ').md}`,data,(err)=>{
+        if(err){
+            console.log("You've encountered an Error")
+        } else {
+            console.log("Your README is being created...")
+        }
+    })
 }
-
-// function writeToFile(fileName,data){
-//     return new Promise((resolve, reject) => {
-//         fs.writeFile(`./${fileName}.toLowerCase().split(' ').join('').md`,data,(err)=>{
-//             if(err)
-//             reject(err)
-//             return
-//         })
-//     })
-// }
-
-// function writeToFile(fileName, data){
-//     return fs.writeFile(path.join(process.cwd(), fileName), data)
-// }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-        .then(function(response){
+        .then((response) => {
             console.log(response)
-        writeToFile(generateMarkdown({...response}))
+        writeToFile(`./utils/READMe.md`, generateMarkdown({... response}))
         })
 }
 
