@@ -71,7 +71,7 @@ const questions = [
         type: 'list',
         list: 'Which license was used?',
         name: 'license',
-        choices:['N/A','MIT License', 'GPL License', 'Apache License', 'GNU License'],
+        choices:['N/A','MIT License', 'GPL License', 'Apache License'],
         validate: license => {
             if(license) {
             return true
