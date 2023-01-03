@@ -1,5 +1,5 @@
-# ngsvbnfg
-  ![GitHub](https://img.shields.io/github/license/LandoBM/professional-ReadMe?logoColor=success)
+# Generator
+  ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
   ## Table of Contents
   * [Description](#description)
@@ -15,23 +15,23 @@
 
     
   ## Description
-  dbvhsd;f
+  Generate README
   ## Installation
-  dvbdsbf
+  From GitHub and Video Tutorial
   ## Usage
-  abvfhld
+  Inquirer
   ## Contributors
-  bvadf;isb
+  Landon M.
   ## License
-  GPL License
+  MIT License
   ## Test
   undefined
 
   ## Questions
-  * Github : [abvlhefb](https://github.com/abvlhefb/)
-  * E-Mail :abhfelba
+  * Github : [LandoBM](https://github.com/LandoBM/)
+  * E-Mail :landon.swdeveloper@gmail.com
 
   ## License
-    Licensed using GPL License.
+    Licensed using MIT License.
 
   

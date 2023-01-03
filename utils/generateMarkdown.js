@@ -4,13 +4,17 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let badge = ``
-  if (license !== 'MIT License') {
-    badge = `![GitHub](https://img.shields.io/github/license/LandoBM/professional-ReadMe?logoColor=success)`
-  } else if (license !== 'GPL License') {
-    badge = `![License](https://img.shields.io/badge/License-GPL-success.svg)`
-  } else if (license !== 'Apache License') {
-    badge = `![GitHub](https://img.shields.io/github/license/LandoBM/professional-ReadMe?logoColor=success)`
-  } else {
+  if (license === 'MIT License') {
+    badge = `![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)`
+  } else if (license === 'Modzilla License') {
+    badge = `![License: Modzilla](https://img.shields.io/badge/License-Modzilla-orange.svg)`
+  } else if (license === 'Apache License') {
+    badge = `![License: Apache](https://img.shields.io/badge/License-Apache-blueviolet.svg)`
+  } else if (license === 'GNU'){ 
+    badge = `![License: GNU](https://img.shields.io/badge/License-GNU-yellowgreen.svg)`
+  } else if(license === 'Creative Commons Zero'){
+    badge =`![License: Creative Commons Zero](https://img.shields.io/badge/License-CreativeCommonsZero-lightgrey.svg)`
+  }else {
     badge = ``
   }
   return badge
