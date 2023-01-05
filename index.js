@@ -1,11 +1,14 @@
-// TODO: Include packages needed for this application
+// Inseerted Packages for the use of the application using require.
+// To install use npm init, npm *package name, this will install the package to Node
 const inquirer = require('inquirer')
 const fs = require('fs');
 const { default: test } = require('node:test');
 const generateMarkdown = require('./utils/generateMarkdown');
 const { userInfo } = require('os');
 
-// TODO: Create an array of questions for user input
+// Array of questions to ask the user for their input. 
+// Created using npm template including: type, message, name, and validate.
+// I also included if statements to ensure there is input for each question asked to the user. 
 const questions = [
     {
         type: 'input',
@@ -105,8 +108,9 @@ const questions = [
         }
     }, 
 ]
-// TODO: Create a function to write README file
 
+// Function created to write to new REAME file based on the questions asked and the user input/answers.
+// To ensure README file is being created properly, included an IF statement that will prompt if error exist in the creation of the README
 function writeToFile(fileName, data){
     return fs.writeFile(`./${fileName.toLowerCase().split(' ')}`,data,(err)=>{
         if(err){
@@ -117,7 +121,7 @@ function writeToFile(fileName, data){
     })
 }
 
-// TODO: Create a function to initialize app
+// Function using inquirer.promt and calling my array for questions and the responses and write to file into the new README file labeled NewRead
 function init() {
     inquirer.prompt(questions)
         .then((response) => {
@@ -126,5 +130,5 @@ function init() {
         })
 }
 
-// Function call to initialize app
+// To call file 
 init();
